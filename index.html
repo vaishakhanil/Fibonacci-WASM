@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Vaishakh Anil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Fibonacci Number using C WASM</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h6 class="title">Finding the N<sup>th</sup> number of Fibonacci Series using C WASM</h6>
+        <form onsubmit="onSubmit(event)">
+            <input class="inputField" placeholder="Enter a number between 0 - 40" min="0" max="40" type="number" name="valueInput" id="values">
+            <button class="submitButton" type="submit">Submit</button><br/>
+            <h6 class="resultVal">Result: <span class="resultField" id="resultOut" ></span></h6>
+        </form>  
+        <h6 class="infoText">Fibonacci N<sup>th</sup> value of give number using the formula ((1 + √5)<sup>n</sup> - (1 - √5)<sup>n</sup>) / (2<sup>n</sup> * √5)</h6>
+    </div>
+
+
+    <script>
+        let input = document.getElementById('values');
+        let resultOutput = document.getElementById('resultOut');
+        let arg = '';
+        let result = 0;
+        function onSubmit(e){
+            e.preventDefault();
+            arg = input.value;
+            result = wasmExports.fib(arg);
+            resultOutput.innerHTML = result;
+        }
+    </script>
+</body>
+</html>
