@@ -4,6 +4,8 @@
     
     <meta charset="UTF-8">
     <meta name="author" content="Vaishakh Anil">
+    <meta name="description" content="Calculating the Nth Value of a Fibonacci series using WebAssembly coded in C Language,
+    compiled using Emscripten. Find the complete code on vaishakhanil github repository.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -16,6 +18,7 @@
     <div class="container">
         <h6 class="title">Finding the N<sup>th</sup> number of Fibonacci Series using C WASM</h6>
         <form onsubmit="onSubmit(event)">
+            <label for="values">Enter the N<sup>th</sup> Value:</label>
             <input class="inputField" placeholder="Enter a number between 0 - 40" min="0" max="40" type="number" name="valueInput" id="values">
             <button class="submitButton" type="submit">Submit</button><br/>
             <h6 class="resultVal">Result: <span class="resultField" id="resultOut" ></span></h6>
