@@ -8,7 +8,6 @@ Demo Link: [Heroku Deployed App](http://fibowasm.herokuapp.com/)
 ```
 $ git clone https://github.com/vaishakhanil/Fibonacci-WASM.git
 // Install EMCC from Emscripten
-$ cd Fibonacci-WASM
 ```
 
 ### :toolbox: Tools Used 
